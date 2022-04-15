@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印</title>
+    <style>
+        .page-header,
+        .page-header-space {
+            height: 20px;
+        }
+
+        .page-footer,
+        .page-footer-space {
+            height: 40px;
+        }
+
+        .page-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid black;
+            /* for demo */
+        }
+
+        .page-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .page {
+            page-break-after: auto;
+        }
+
+        @page {
+            size: A5;
+        }
+
+        @media print {
+            thead {
+                display: table-header-group;
+            }
+
+            tfoot {
+                display: table-footer-group;
+            }
+
+            body {
+                margin: 0;
+                height: 100%;
+                min-height: 100%;
+            }
+        }
+
+        .page {
+            page-break-after: always;
+        }
+
+        .otherfooter {
+            width: 100%;
+            position: absolute;
+            top: -140px;    
+        }
+
+        .hidefooter {
+            position: absolute;
+            bottom: 0;
+            height: 20px;
+            width: 100%;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: relative;">
+        <table style="width: 100%; height: 100%;">
+            <thead>
+                <tr>
+                    <td>
+                        PackingList
+                        <div class="page-header-space"></div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="table-bordered w-100 d-print-table" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <td>Ship to：</td>
+                                    <td>lishengjun</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Address：</td>
+                                    <td>深圳市南山区南山科技园高新南七道国信投资大厦</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="page-content-space"></div>
+                        <table class="table-bordered w-100 d-print-table" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <td>Line Item</td>
+                                    <td>Part Number</td>
+                                    <td>Qty</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>0</td>
+                                    <td>partNumber0</td>
+                                    <td>0</td>
+                                    <td>描述0</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>partNumber1</td>
+                                    <td>1</td>
+                                    <td>描述1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>partNumber2</td>
+                                    <td>2</td>
+                                    <td>描述2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>partNumber3</td>
+                                    <td>3</td>
+                                    <td>描述3</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>partNumber4</td>
+                                    <td>4</td>
+                                    <td>描述4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>partNumber5</td>
+                                    <td>5</td>
+                                    <td>描述5</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>partNumber6</td>
+                                    <td>6</td>
+                                    <td>描述6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>partNumber7</td>
+                                    <td>7</td>
+                                    <td>描述7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>partNumber8</td>
+                                    <td>8</td>
+                                    <td>描述8</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>partNumber9</td>
+                                    <td>9</td>
+                                    <td>描述9</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>partNumber7</td>
+                                    <td>7</td>
+                                    <td>描述7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>partNumber8</td>
+                                    <td>8</td>
+                                    <td>描述8</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>partNumber9</td>
+                                    <td>9</td>
+                                    <td>描述9</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>partNumber7</td>
+                                    <td>7</td>
+                                    <td>描述7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>partNumber8</td>
+                                    <td>8</td>
+                                    <td>描述8</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>partNumber9</td>
+                                    <td>9</td>
+                                    <td>描述9</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>partNumber10</td>
+                                    <td>10</td>
+                                    <td>描述10</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>partNumber11</td>
+                                    <td>11</td>
+                                    <td>描述11</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>partNumber12</td>
+                                    <td>12</td>
+                                    <td>描述12</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>partNumber13</td>
+                                    <td>13</td>
+                                    <td>描述13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>partNumber14</td>
+                                    <td>14</td>
+                                    <td>描述14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>partNumber15</td>
+                                    <td>15</td>
+                                    <td>描述15</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>partNumber16</td>
+                                    <td>16</td>
+                                    <td>描述16</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>partNumber17</td>
+                                    <td>17</td>
+                                    <td>描述17</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>partNumber18</td>
+                                    <td>18</td>
+                                    <td>描述18</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>partNumber19</td>
+                                    <td>19</td>
+                                    <td>描述19</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>partNumber20</td>
+                                    <td>20</td>
+                                    <td>描述20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>partNumber21</td>
+                                    <td>21</td>
+                                    <td>描述21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>partNumber22</td>
+                                    <td>22</td>
+                                    <td>描述22</td>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>partNumber23</td>
+                                    <td>23</td>
+                                    <td>描述23</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>partNumber24</td>
+                                    <td>24</td>
+                                    <td>描述24</td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>partNumber25</td>
+                                    <td>25</td>
+                                    <td>描述25</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>partNumber26</td>
+                                    <td>26</td>
+                                    <td>描述26</td>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <td>partNumber27</td>
+                                    <td>27</td>
+                                    <td>描述27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>partNumber28</td>
+                                    <td>28</td>
+                                    <td>描述28</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>partNumber29</td>
+                                    <td>29</td>
+                                    <td>描述29</td>
+                                </tr>
+                                <tr>
+                                    <td>30</td>
+                                    <td>partNumber30</td>
+                                    <td>30</td>
+                                    <td>描述30</td>
+                                </tr>
+                                <tr>
+                                    <td>31</td>
+                                    <td>partNumber31</td>
+                                    <td>31</td>
+                                    <td>描述31</td>
+                                </tr>
+                                <tr>
+                                    <td>32</td>
+                                    <td>partNumber32</td>
+                                    <td>32</td>
+                                    <td>描述32</td>
+                                </tr>
+                                <tr>
+                                    <td>33</td>
+                                    <td>partNumber33</td>
+                                    <td>33</td>
+                                    <td>描述33</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>partNumber34</td>
+                                    <td>34</td>
+                                    <td>描述34</td>
+                                </tr>
+                                <tr>
+                                    <td>35</td>
+                                    <td>partNumber35</td>
+                                    <td>35</td>
+                                    <td>描述35</td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>partNumber36</td>
+                                    <td>36</td>
+                                    <td>描述36</td>
+                                </tr>
+                                <tr>
+                                    <td>37</td>
+                                    <td>partNumber37</td>
+                                    <td>37</td>
+                                    <td>描述37</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>partNumber38</td>
+                                    <td>38</td>
+                                    <td>描述38</td>
+                                </tr>
+                                <tr>
+                                    <td>39</td>
+                                    <td>partNumber39</td>
+                                    <td>39</td>
+                                    <td>描述39</td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>partNumber40</td>
+                                    <td>40</td>
+                                    <td>描述40</td>
+                                </tr>
+                                <tr>
+                                    <td>41</td>
+                                    <td>partNumber41</td>
+                                    <td>41</td>
+                                    <td>描述41</td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>partNumber42</td>
+                                    <td>42</td>
+                                    <td>描述42</td>
+                                </tr>
+                                <tr>
+                                    <td>43</td>
+                                    <td>partNumber43</td>
+                                    <td>43</td>
+                                    <td>描述43</td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>partNumber44</td>
+                                    <td>44</td>
+                                    <td>描述44</td>
+                                </tr>
+                                <tr>
+                                    <td>45</td>
+                                    <td>partNumber45</td>
+                                    <td>45</td>
+                                    <td>描述45</td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>partNumber46</td>
+                                    <td>46</td>
+                                    <td>描述46</td>
+                                </tr>
+                                <tr>
+                                    <td>47</td>
+                                    <td>partNumber47</td>
+                                    <td>47</td>
+                                    <td>描述47</td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>partNumber48</td>
+                                    <td>48</td>
+                                    <td>描述48</td>
+                                </tr>
+                                <tr>
+                                    <td>49</td>
+                                    <td>partNumber49</td>
+                                    <td>49</td>
+                                    <td>描述49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        我是尾巴尾巴尾巴
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="hidefooter"></div>
+    </div>
+
+    <div class="page"></div>
+
+    <!-- 页面3 -->
+    <div style="margin-top: 100px;position: relative;">
+        <div class="otherfooter">我是尾巴尾巴尾巴</div>
+        其余的内容
+        其余的内容
+        其余的内容
+        其余的内容
+        其余的内容
+        其余的内容
+        其余的内容
+        其余的内容
+        其余的内容
+    </div>
+</body>
+
+
+
+</html>

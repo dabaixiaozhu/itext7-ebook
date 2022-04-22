@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class TestItext {
-    private static final String ORIG = "C:\\Users\\zeyu.lin\\Desktop\\index\\new.html";
+    private static final String ORIG = "C:\\Users\\zeyu.lin\\Desktop\\indexresult.html";
     private static final String OUTPUT_FOLDER = "C:\\Users\\zeyu.lin\\Desktop\\";
     private static final String WATER_MARK_TEXT = "linlinlin";
     private static final String WORD_PATH = "C:\\Windows\\Fonts\\msyh.ttc,0";
